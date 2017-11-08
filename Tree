@@ -1,0 +1,30 @@
+const array = [
+	{
+		name: 'machao',
+		id: 1,
+		parent: null
+	},
+	{
+		name: 'yaojie',
+		id: 2,
+		parent: 1
+	},
+	{
+		name: 'guoshuang',
+		id: 3,
+		parent: 2
+	}
+	];
+createTree = (id, array) => {
+	let children = [];
+	array.forEach((it) => {
+		if(id === it.parent) {
+			const child = createTree(it.id, array);
+			it.children = child;
+			children.push(it);
+		}
+	});
+	return children;
+};
+
+console.log(JSON.stringify(createTree(1, array)));
