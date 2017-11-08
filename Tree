@@ -1,16 +1,16 @@
 const array = [
 	{
-		name: 'machao',
+		name: 'cp3',
 		id: 1,
 		parent: null
 	},
 	{
-		name: 'yaojie',
+		name: 'hadeng',
 		id: 2,
 		parent: 1
 	},
 	{
-		name: 'guoshuang',
+		name: 'bamote',
 		id: 3,
 		parent: 2
 	}
